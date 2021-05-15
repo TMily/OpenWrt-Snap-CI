@@ -37,7 +37,7 @@ test -n "$cpuinfo" || sed -i "s/_('CPU Info'),cpuinfo.cpufreq,//" /www/luci-stat
 
 test $version -lt 1 && {
 	uci set luci.main.lang='auto'
-	uci set luci.main.mediaurlbase=/luci-static/edge
+	uci set luci.main.mediaurlbase=/luci-static/argon
 	uci commit luci
 
 	uci get system.@system[0] >/dev/null 2>&1 && {
